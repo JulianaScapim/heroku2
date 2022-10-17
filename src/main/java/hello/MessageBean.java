@@ -47,7 +47,7 @@ public class MessageBean implements Serializable {
     public String getManha() {
         switch (this.lang){
             case "pt":
-                return "Bom dia";
+                return "Bom dia" ++ hora.getHour();
             case "en":
                 return "Hello";
             case "de":
@@ -60,7 +60,7 @@ public class MessageBean implements Serializable {
     public String getTarde() {
         switch (this.lang){
             case "pt":
-                return "Boa Tarde";
+                return "Boa Tarde" ++ hora.getHour();
             case "en":
                 return "Hello";
             case "de":
@@ -73,7 +73,7 @@ public class MessageBean implements Serializable {
     public String getNoite() {
         switch (this.lang){
             case "pt":
-                return "Boa noite";
+                return "Boa noite" ++ hora.getHour();
             case "en":
                 return "Hello";
             case "de":
