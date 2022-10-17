@@ -23,7 +23,7 @@
         <jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!</h2>
         <jsp:getProperty name="myBean" property="msg2"/> <jsp:getProperty name="myBean" property="aut"/>
         <footer>
-            <br><br><h2>Espero que tenha gostado! :)</h2>
+            <br><br><h2>Espero que tenha gostado! :) <3</h2>
             <h3>Direitos Autorais de José Viterbo</h3>
         </footer>
     </body>
