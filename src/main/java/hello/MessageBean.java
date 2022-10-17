@@ -33,10 +33,10 @@ public class MessageBean implements Serializable {
     }
     public String getMsg() {
         LocalTime hora = LocalTime.now();
-        if (hora.getHour() >= 0 && hora.getHour() < 12){
+        if ((hora.getHour() - 3) >= 0 && hora.getHour() < 12){
                return getManha();
         }
-        else if (hora.getHour() >= 12 && hora.getHour() < 18){
+        else if ((hora.getHour() -3) >= 12 && hora.getHour() < 18){
                return getTarde();
         }
         else{
@@ -49,9 +49,9 @@ public class MessageBean implements Serializable {
             case "pt":
                 return "Bom dia";
             case "en":
-                return "Hello";
+                return "Good Morning";
             case "de":
-                return "Hallo";
+                return "Guten Morgen";
             case "fr":
                 return "Bonjour";
         }
@@ -62,11 +62,11 @@ public class MessageBean implements Serializable {
             case "pt":
                 return "Boa Tarde";
             case "en":
-                return "Hello";
+                return "Good Afternoon";
             case "de":
-                return "Hallo";
+                return "Guten Nachmittag";
             case "fr":
-                return "Bonjour";
+                return "Bon après-midi";
         }
         return "";
     }
@@ -75,11 +75,11 @@ public class MessageBean implements Serializable {
             case "pt":
                 return "Boa noite";
             case "en":
-                return "Hello";
+                return "Good Evening";
             case "de":
-                return "Hallo";
+                return "Guten Abend";
             case "fr":
-                return "Bonjour";
+                return "bonsoir";
         }
         return "";
     }
