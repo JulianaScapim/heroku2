@@ -39,7 +39,7 @@ public class MessageBean implements Serializable {
         else if ((hora.getHour() -3) >= 12 && (hora.getHour() -3) < 18){
                return getTarde();
         }
-        else if ((hora.getHour() -3) >= 18 && (hora.getHour() -3) <= 23){
+        else{
                return getNoite();
         }
     }
