@@ -25,7 +25,7 @@ public class MessageBean implements Serializable {
     }
     
     public String getAut() {
-        return "José Viterbo";
+        return "Juliana Scapim";
     }
     
     public void setLang(String value) {
