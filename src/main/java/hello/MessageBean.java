@@ -33,13 +33,13 @@ public class MessageBean implements Serializable {
     }
     public String getMsg() {
         LocalTime hora = LocalTime.now();
-        if ((hora.getHour() - 3) >= 0 && hora.getHour() < 12){
+        if ((hora.getHour() - 3) >= 0 && (hora.getHour() -3) < 12){
                return getManha();
         }
-        else if ((hora.getHour() -3) >= 12 && hora.getHour() < 18){
+        else if ((hora.getHour() -3) >= 12 && (hora.getHour() -3) < 18){
                return getTarde();
         }
-        else{
+        else if((hora.getHour() -3) >= 18 && (hora.getHour() -3) < 24){
                return getNoite();
         }
     }
