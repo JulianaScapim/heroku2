@@ -9,6 +9,7 @@ package hello;
 
 import java.beans.*;
 import java.io.Serializable;
+import java.time.LocalTime;
 /**
  *
  * @author viter
@@ -31,9 +32,48 @@ public class MessageBean implements Serializable {
         lang = value;
     }
     public String getMsg() {
+        LocalTime hora = LocalTime.now();
+        if (hora.getHour() >= 0 && hora.getHour() < 12){
+               return getManha();
+        }
+        else if (hora.getHour() >= 12 && hora.getHour() < 18){
+               return getTarde();
+        }
+        else{
+               return getNoite();
+        }
+    }
+     
+    public String getManha() {
         switch (this.lang){
             case "pt":
-                return "Olá";
+                return "Bom dia";
+            case "en":
+                return "Hello";
+            case "de":
+                return "Hallo";
+            case "fr":
+                return "Bonjour";
+        }
+        return "";
+    }
+    public String getTarde() {
+        switch (this.lang){
+            case "pt":
+                return "Boa Tarde";
+            case "en":
+                return "Hello";
+            case "de":
+                return "Hallo";
+            case "fr":
+                return "Bonjour";
+        }
+        return "";
+    }
+    public String getNoite() {
+        switch (this.lang){
+            case "pt":
+                return "Boa noite";
             case "en":
                 return "Hello";
             case "de":
