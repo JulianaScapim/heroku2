@@ -9,8 +9,6 @@ package hello;
 
 import java.beans.*;
 import java.io.Serializable;
-import org.joda.time.DateTime;
-
 /**
  *
  * @author viter
@@ -33,22 +31,9 @@ public class MessageBean implements Serializable {
         lang = value;
     }
     public String getMsg() {
-         DateTime dateTime = new DateTime();
-         int horario = dateTime.getHourOfDay();
-         horario = horario - 3;
-         String manha ="";
-         String tarde ="";
-         String noite ="";
         switch (this.lang){
             case "pt":
-                if (horario > 0 && horario < 12){
-                    manha = "Bom dia";
-                    return manha;
-                 }      
-                else if (horario > 12 && horario < 18){
-                     tarde = "Boa Tarde";
-                     return tarde;
-                 }
+                return "Olá";
             case "en":
                 return "Hello";
             case "de":
