@@ -36,13 +36,18 @@ public class MessageBean implements Serializable {
          DateTime dateTime = new DateTime();
          int horario = dateTime.getHourOfDay();
          horario = horario - 3;
+         String manha ="";
+         String tarde ="";
+         String noite ="";
         switch (this.lang){
             case "pt":
                 if (horario > 0 && horario < 12){
-                    return "Bom Dia";
+                    manha = "Bom dia";
+                    return manha;
                  }      
-                if (horario > 12 && horario < 18){
-                    return "Boa Tarde";
+                else if (horario > 12 && horario < 18){
+                     tarde = "Boa Tarde";
+                     return tarde;
                  }
             case "en":
                 return "Hello";
